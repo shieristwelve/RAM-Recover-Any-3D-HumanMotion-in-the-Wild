@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM: Recover Any 3D Human Motion in-the-Wild</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #2d2d2f;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 1.5rem;
+            line-height: 1.5;
+        }
+        /* 主标题 */
+        .main-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.8rem;
+            color: #2d2d2f;
+            line-height: 1.2;
+            max-width: 1200px;
+        }
+        /* 会议信息 */
+        .conference {
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            font-weight: 600;
+            color: #007aff;
+            text-align: center;
+            margin-bottom: 1.8rem;
+        }
+        /* 作者行 */
+        .authors {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            text-align: center;
+            margin-bottom: 0.8rem;
+            color: #2d2d2f;
+            max-width: 1000px;
+        }
+        .authors sup {
+            font-size: 0.7em;
+            vertical-align: super;
+        }
+        /* 标注文本（同等贡献、通讯作者） */
+        .note {
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            color: #636366;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        /* 单位行 */
+        .affiliations {
+            font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+            color: #48484a;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            max-width: 1000px;
+        }
+        .affiliations sup {
+            font-size: 0.7em;
+            vertical-align: super;
+        }
+        /* 摘要模块 */
+        .abstract-section {
+            max-width: 900px;
+            margin-bottom: 2.5rem;
+        }
+        .abstract-title {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #2d2d2f;
+        }
+        .abstract-text {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            color: #3a3a3c;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        /* 按钮容器 */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        /* 胶囊按钮 */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            background-color: #2d2d2f;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s ease;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        /* 底部提示文本 */
+        .footer-text {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: #3a3a3c;
+            text-align: center;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">RAM: Recover Any 3D Human Motion in-the-Wild</h1>
+    
+    <p class="conference">accepted by CVPR2026 !</p>
+
+    <p class="authors">
+        Sen Jia<sup>1,*</sup>, Ning Zhu<sup>2,*</sup>, Jinqin Zhong<sup>2</sup>, Jiale Zhou<sup>3</sup>, Huaping Zhang<sup>4</sup>, Jenq-Neng Hwang<sup>1</sup>, Lei Li<sup>4,†</sup>
+    </p>
+
+    <p class="note">* These authors contributed equally to this work.</p>
+    <p class="note">† Corresponding Author. (lenny.lilei.cs@gmail.com)</p>
+
+    <p class="affiliations">
+        <sup>1</sup>University of Washington
+        <sup>2</sup>Anhui University
+        <sup>3</sup>East China University of Science and Technology
+        <sup>4</sup>Beijing Institute of Technology
+    </p>
+
+    <div class="abstract-section">
+        <h2 class="abstract-title">Abstract</h2>
+        <p class="abstract-text">
+            RAM incorporates a motion-aware semantic tracker with adaptive Kalman filtering to achieve robust identity association under severe occlusions and dynamic interactions. A memory-augmented Temporal HMR module further enhances human motion reconstruction by injecting spatio-temporal priors for consistent and smooth motion estimation. Moreover, a lightweight Predictor module forecasts future poses to maintain reconstruction continuity, while a gated combiner adaptively fuses reconstructed and predicted features to ensure coherence and robustness. Experiments on in-the-wild multi-person benchmarks such as PoseTrack and 3DPW, demonstrate that RAM substantially outperforms previous state-of-the-art in both Zero-shot tracking stability and 3D accuracy, offering a generalizable paradigm for markerless 3D human motion capture in-the-wild.
+        </p>
+    </div>
+
+    <div class="btn-group">
+        <a href="https://arxiv.org/abs/2603.19929" target="_blank" class="btn">📄 arXiv</a>
+        <a href="#" class="btn">🎬 Demo</a>
+        <a href="#" class="btn">💻 Code</a>
+    </div>
+
+    <p class="footer-text">Code and model weights will be coming soon!</p>
+</body>
+</html>
